@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First Demo</title> 
+</head> 
+
+<body onload="updateTable()">
+    <form id="personForm" onsubmit="event.preventDefault();validateForm()" action="">
+        <table border="1" width="auto" height="auto" cellspacing="0" cellpadding="3">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text"><span></span></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email"><span></span></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="date"><span></span></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="messageCheckbox" value="Music">Music
+                    <input type="checkbox" name="messageCheckbox" value="Singing">Singing
+                    <input type="checkbox" name="messageCheckbox" value="Reading">Reading
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select value="country" name="country">
+                        <option value="-">Select</option>
+                    </select>
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select value="state">
+                        <option value="-">Select</option>
+                    </select>
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>
+                    <select value="city">
+                        <option value="-">Select</option>
+                    </select>
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td name="lastTd">
+                    <input type="submit" value="Save"><span></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+    <input type="text" id="search">&nbsp;<button onclick="searchTable()" id="searchbtn">Search</button>
+    <button onclick="resetTable()" id="reset">Reset</button>
+    <br><br>
+    <br><br>
+    <table id="personDetails" border="1" cellspacing="0" cellpadding="1">
+        <thead>
+            <tr>
+                <th>Name<div>
+                        <select id="dropDownSort">
+                            <option value="-">Select</option>
+                            <option value="ascending">Ascending</option>
+                            <option value="descending">Descending</option>
+                        </select>
+                    </div>
+                </th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Hobbies</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Action</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <br>
+
+    <script src="table_operations.js"></script>
+    <script src="countries_states_cities.js"></script>
+    <script src="country_city_dropdown.js"></script>
+    <script src="form_validtion.js"></script>
+    <script src="form_operations.js"></script>
+</body>
+
+</html>
